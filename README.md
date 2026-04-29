@@ -3,7 +3,7 @@
   <summary>Details</summary>
   <ol>
     <li>old stuff</li>
-    <li>that i want to keep</li>
+    <li>and other things</li>
     <li></li>
     <li></li>
     <li></li>
