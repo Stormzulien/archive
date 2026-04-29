@@ -1,7 +1,6 @@
 # archive
 <details>
   <summary>Details</summary>
-  old stuff
   <ol>
     <li>old stuff</li>
     <li>that i want to keep</li>
