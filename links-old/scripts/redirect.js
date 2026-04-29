@@ -1,5 +1,7 @@
 "use strict";
 
+console.warn("old 404 page: https://stormzulien.github.io/archive/links-old/404.html");
+
 // toggle message here
 const showMsg = true;
 
