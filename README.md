@@ -1,2 +1,5 @@
 # archive
-old stuff
+<details>
+  <summary>Details</summary>
+  old stuff
+</details>
