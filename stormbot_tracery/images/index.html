@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <style>
+      :root {
+        --bg: white;
+        --colour: black;
+        --error: red;
+        --header-bg: lightgrey;
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -17,12 +24,15 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        background-color: var(--bg);
+        color: var(--colour);
       }
 
       header {
-        background-color: lightgrey;
+        background-color: var(--header-bg);
         display: flex;
         padding: 0.4em 0.8em;
+        color: black;
       }
 
       header h1 {
@@ -51,7 +61,16 @@
         margin: 1em;
         display: block;
         font: 1.2rem monospace;
-        color: red;
+        color: var(--error);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000020;
+          --colour: white;
+          --error: blueviolet;
+          --header-bg: grey;
+        }
       }
     </style>
   </head>
