@@ -83,22 +83,22 @@
       const path = new URL(".", location.href).href;
 
       imgs.forEach(img => {
-        if (image.name !== "index.html") {
-          const li = document.createElement("li");
+        if (image.name === "index.html") return;
 
-          const fullUrl = path + img.name;
+        const li = document.createElement("li");
 
-          const imglink = document.createElement("a");
-            Object.assign(imglink, {
-              href: fullUrl,
-              innerText: img.name,
-              title: fullUrl
-            });
+        const fullUrl = path + img.name;
 
-          li.appendChild(imglink);
+        const imglink = document.createElement("a");
+          Object.assign(imglink, {
+            href: fullUrl,
+            innerText: img.name,
+            title: fullUrl
+          });
 
-          imagesList.appendChild(li);
-        }
+        li.appendChild(imglink);
+
+        imagesList.appendChild(li);
       });
     </script>
   </body>
