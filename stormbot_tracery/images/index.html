@@ -46,6 +46,13 @@
       main {
         margin-bottom: 80px;
       }
+
+      .error {
+        margin: 1em;
+        display: block;
+        font: 1.2rem monospace;
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -58,6 +65,8 @@
     
     <script type="module">
       "use strict";
+
+      const imagesList = document.querySelector("#images-list");
 
       async function getImgs() {
         const url = "https://api.github.com/repos/stormzulien/archive/contents/stormbot_tracery/images";
@@ -72,34 +81,45 @@
           const imgs = await response.json();
           return imgs;
         } catch (error) {
-          console.error(error.message);
+          console.error("Error: " + error.message);
         }
       }
 
       const files = await getImgs();
-            
-      const imagesList = document.querySelector("#images-list");
 
-      const path = new URL(".", location.href).href;
+      try {
+        listImages();
+      } catch (error) {
+        const span = document.createElement("span");
+          span.innerText = "Error :(";
+          span.classList.add("error");
 
-      files.forEach(file => {
-        if (file.name === "index.html") return;
+        imagesList.remove();
+        document.querySelector("main").appendChild(span);
+      }
 
-        const li = document.createElement("li");
+      function listImages() {
+        const path = new URL(".", location.href).href;
 
-        const fullUrl = path + file.name;
+        files.forEach(file => {
+          if (file.name === "index.html") return;
 
-        const imglink = document.createElement("a");
-          Object.assign(imglink, {
-            href: fullUrl,
-            innerText: file.name,
-            title: fullUrl
-          });
+          const li = document.createElement("li");
 
-        li.appendChild(imglink);
+          const fullUrl = path + file.name;
 
-        imagesList.appendChild(li);
-      });
+          const imglink = document.createElement("a");
+            Object.assign(imglink, {
+              href: fullUrl,
+              innerText: file.name,
+              title: fullUrl
+            });
+
+          li.appendChild(imglink);
+
+          imagesList.appendChild(li);
+        });
+      }
     </script>
   </body>
 </html>
