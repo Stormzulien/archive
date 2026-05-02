@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: lightgrey;
+        display: flex;
+        padding: 0.4em 0.8em;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #images-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.4em;
+      }
+
+      main {
+        margin-bottom: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Images</h1>
+    </header>
+    <main>
+      <ul id="images-list"></ul>
+    </main>
+    
+    <script type="module">
+      "use strict";
+
+      async function getImgs() {
+        const url = "https://api.github.com/repos/stormzulien/archive/contents/stormbot_tracery/images";
+
+        try {
+          const response = await fetch(url);
+
+          if (!response.ok) {
+            throw new Error("error");
+          }
+
+          const imgs = await response.json();
+          return imgs;
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+
+      const imgs = await getImgs();
+            
+      const imagesList = document.querySelector("#images-list");
+
+      const path = new URL(".", location.href).href;
+
+      imgs.forEach(img => {
+        const li = document.createElement("li");
+
+        const fullUrl = path + img.name;
+
+        const imglink = document.createElement("a");
+          Object.assign(imglink, {
+            href: fullUrl,
+            innerText: img.name,
+            title: fullUrl
+          });
+
+        li.appendChild(imglink);
+
+        imagesList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
