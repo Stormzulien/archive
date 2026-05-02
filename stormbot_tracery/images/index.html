@@ -76,23 +76,23 @@
         }
       }
 
-      const imgs = await getImgs();
+      const files = await getImgs();
             
       const imagesList = document.querySelector("#images-list");
 
       const path = new URL(".", location.href).href;
 
-      imgs.forEach(img => {
-        if (image.name === "index.html") return;
+      files.forEach(file => {
+        if (file.name === "index.html") return;
 
         const li = document.createElement("li");
 
-        const fullUrl = path + img.name;
+        const fullUrl = path + file.name;
 
         const imglink = document.createElement("a");
           Object.assign(imglink, {
             href: fullUrl,
-            innerText: img.name,
+            innerText: file.name,
             title: fullUrl
           });
 
