@@ -1,0 +1,296 @@
+body {
+  background-color:rgb(218, 238, 255);
+  font-family: Roboto;
+  text-align: center;
+}
+
+.p-0 {
+  font-family: Figtree, Roboto;
+  font-weight: 700;
+}
+
+.p-1 {
+  padding-top: 28px;
+  font-size: large;
+  padding-bottom: 20px;
+  text-shadow: 1px 1px 0px rgba(71, 127, 233, 0.507);
+}
+
+.box-title {
+  background-color: rgb(115, 192, 255);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.568);
+  color: white;
+}
+
+button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  width: 120px;
+
+  border-radius: 8px;
+  border-style: solid;
+  border-color: rgb(0, 0, 146);
+  background-color: rgb(0, 154, 165);
+  cursor: pointer;
+
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+.youtube {
+  border-color: rgb(131, 0, 0);
+  background-color: rgb(170, 1, 1);
+  transition: border-color 0.2s, 
+    background-color 0.2s,
+    border-radius 0.2s,
+    box-shadow 0.2s;
+}
+
+.youtube:hover {
+  border-color: rgb(216, 38, 29);
+  background-color: rgb(216, 38, 29);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.568);
+}
+
+.bluesky {
+  border-color: rgb(0, 69, 134);
+  background-color: rgb(0, 133, 255);
+  transition: border-color 0.2s,
+    background-color 0.2s,
+    color 0.2s,
+    width 0.2s,
+    border-radius 0.2s,
+    box-shadow 0.2s;
+}
+
+.bluesky:hover {
+  border-color: rgb(0, 133, 255);
+  border-radius: 15px;
+  background-color: white;
+  color: rgb(0, 133, 255);
+  width: 130px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.twitter {
+  border-color: rgb(0, 49, 184);
+  background-color: rgb(29, 155, 240);
+  transition: border-color 0.15s,
+    width 0.15s,
+    border-radius 0.15s,
+    box-shadow 0.15s;
+}
+
+.twitter:hover {
+  border-color: rgb(29, 155, 240);
+  width: 140px;
+  height: 39px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tumblr {
+  border-color: rgb(0, 25, 53);
+  background-color: rgb(0, 184, 255);
+  transition: border-color 0.2s,
+    border-radius 0.2s,
+    color 0.2s,
+    width 0.2s,
+    box-shadow 0.2s;
+}
+
+.tumblr:hover {
+  background-color: rgb(51, 198, 255);
+  border-color: rgb(51, 198, 255);
+  border-radius: 0px;
+  color: rgb(0, 25, 53);
+  width: 140px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.849);
+}
+
+.linktree {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(19, 0, 65);
+  color: rgb(19, 0, 65);
+  transition: border-color 0.2s,
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.linktree:hover {
+  background-color: rgb(19, 0, 65);
+  border-color: rgb(19, 0, 65);
+  color: white;
+  box-shadow: 5px 5px 10px rgba(54, 54, 54, 0.336);
+}
+
+.discord {
+  background-color: rgb(12, 14, 78);
+  border-color: rgb(0, 0, 6);
+  color: white;
+  transition: border-color 0.2s,
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    border-radius 0.2s;
+}
+
+.discord:hover {
+  background-color: white;
+  border-color: rgb(12, 14, 78);
+  color: rgb(12, 14, 78);
+  box-shadow: 4px 4px 0px rgb(88, 101, 242);
+  border-radius: 18px;
+} 
+
+.question-mark {
+  font-family: Solway;
+  font-size: 200px;
+  margin: 0px;
+  font-weight: bold;
+  color: rgb(87, 31, 139);
+  text-shadow: 6px 6px 0px rgba(71, 127, 233, 0.507);
+  cursor: url("../images/cursors/question-cursor.png") 4 4, auto;
+  display: inline;
+}
+
+.error-text, .error-404 {
+  padding: 2px;
+  font-weight: 600;
+  color: rgb(8, 35, 83)
+}
+
+.error-404 {
+  font-size: 30px;
+  text-shadow: 2px 2px 0px rgba(71, 127, 233, 0.507);
+}
+
+.go-home {
+  margin-top: 26px;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(19, 0, 65);
+  color: rgb(19, 0, 65);
+  transition: border-color 0.2s,
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.go-home:hover {
+  background-color: rgb(19, 0, 65);
+  border-color: rgb(19, 0, 65);
+  color: white;
+  box-shadow: 4px 4px 0px rgba(100, 91, 224, 0.603);
+}
+
+.surround-box {
+  display: inline-block;
+  /* background-color: #c8d8e6; */
+  border-color: #53697a;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  border-radius: 22px;
+  border-width: 10px;
+  border-style: solid;
+  background: #a3b7c7;
+  background: linear-gradient(122deg, rgba(163, 183, 199, 1) 0%, rgba(126, 215, 217, 1) 100%);
+}
+
+#redirect-overlay {
+  background-color: #F4F4F4;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  z-index: 999;
+  /* visibility: hidden; */
+}
+
+/* #redirect-overlay.shown {
+  visibility: visible;
+} */
+
+#redirect-overlay.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (prefers-color-scheme: dark) { 
+  #redirect-overlay {
+    background-color: #363636;
+    color: white;
+  }
+}
+
+#new-msg {
+  font-size: 0.96em;
+  position: fixed;
+  bottom: 0.3em;
+  left: 0.3em;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  border-radius: 1em;
+  filter: drop-shadow(0px 0px 3px #00000033);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-msg a {
+  padding: 0.6em 1em;
+  padding-right: 0.4em;
+  color: black;
+  text-decoration: none;
+}
+
+#new-msg a:hover {
+  text-decoration: underline;
+}
+
+#new-msg button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  padding: 0.6em 1em;
+  width: 3em;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s;
+}
+
+#new-msg button:hover {
+  background-color: #FFFFFF5e
+}
+
+#new-msg button:active {
+  opacity: 0.6;
+}
+
+#new-msg button img {
+  height: 2em;
+}
